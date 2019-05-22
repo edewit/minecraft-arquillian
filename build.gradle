@@ -1,0 +1,24 @@
+plugins {
+    id 'war'
+}
+
+group 'ch.nerdin.minecraft'
+version '1.0-SNAPSHOT'
+
+war {
+    archiveName = 'hello.war'
+}
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.jboss.arquillian.junit:arquillian-junit-container:1.4.0.Final'
+    testCompile 'org.arquillian.cube:arquillian-cube-docker:1.16.0'
+    testCompile 'org.jboss.arquillian.container:arquillian-tomcat-remote-7:1.0.0.CR7'
+}
